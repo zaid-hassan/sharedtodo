@@ -1,7 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useTheme } from '../../contexts/contexts'
 
 function Navbar() {
+    const {theme, onThemeToggle}= useTheme();
+    
     return (
         <>
             <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -13,6 +16,11 @@ function Navbar() {
 
             <aside id="separator-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
                 <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                    <ul className='mb-4 pb-2 font-medium border-b border-gray-200 dark:border-gray-700'>
+                        <li>
+                            <h1 className='text-xl pl-2 font-thin dark:text-white'>ToDo</h1>
+                        </li>
+                    </ul>
                     <ul className="space-y-2 font-medium">
                         <li>
                             <NavLink to="/dashboard" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -110,7 +118,7 @@ function Navbar() {
                             </NavLink>
                         </li>
                     </ul>
-                    <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+                    <ul className="pt-4 mt-4 font-medium border-t border-gray-200 dark:border-gray-700">
                         <li>
                             <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                 <svg className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 21">
@@ -118,7 +126,12 @@ function Navbar() {
                                 </svg>
                                 <span className="flex-1 ms-3 whitespace-nowrap">Theme</span>
                                 <label className="inline-flex items-center cursor-pointer">
-                                    <input type="checkbox" value="" className="sr-only peer"></input>
+                                    <input
+                                    type="checkbox"
+                                    value=""
+                                    onChange={onThemeToggle}
+                                    checked={theme === 'dark'}
+                                    className="sr-only peer"></input>
                                     <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                                 </label>
                             </div>
