@@ -33,7 +33,7 @@ function App() {
         document.querySelector('html').classList.add(theme);
     }, [theme])
     return (
-        <div className="dark:bg-slate-900">
+        <div className="min-h-screen dark:bg-slate-900">
             <ThemeProvider value={{theme, darkMode, lightMode, onThemeToggle}}>
                 <Navbar />
             </ThemeProvider>
