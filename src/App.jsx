@@ -1,14 +1,11 @@
-import { Button } from "@/components/ui/button"
-import { HStack } from "@chakra-ui/react"
+import React from 'react'
+import Signup from './components/custom/Signup'
 
 function App() {
-
   return (
-    <>
-      <HStack>
-        <Button>Click me</Button>
-      </HStack>
-    </>
+    <div>
+      <Signup />
+    </div>
   )
 }
 
