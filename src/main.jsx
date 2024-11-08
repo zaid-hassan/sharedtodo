@@ -2,20 +2,24 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import {
   createBrowserRouter,
-  RouterProvider,
+  createRoutesFromElements,
+  RouterProvider, Route, Navigate
 } from "react-router-dom";
 import './index.css'
-import App from './App.jsx'
-import Root from './routes/Root';
 import Layout from './Layout';
-import Signup from './components/custom/Signup';
+import Dashboard from './components/custom/pages/Dashboard';
+import Inbox from './components/custom/pages/Inbox';
+import Home from './components/custom/pages/Home';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path='dashboard' element={<Dashboard />} />
+      <Route path='inbox' element={<Inbox />} />
+    </Route>
+  )
+);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
