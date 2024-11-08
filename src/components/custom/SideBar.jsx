@@ -11,6 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { ModeToggle } from "./ModeToggle"
 
 // Menu items.
 const items = [
@@ -55,6 +56,7 @@ export function SideBar() {
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
+            <ModeToggle />
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
