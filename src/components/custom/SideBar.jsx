@@ -1,4 +1,4 @@
-import { Inbox, LogIn, LogOut, LayoutDashboard } from "lucide-react"
+import { Inbox, LogIn, LogOut, LayoutDashboard, SquarePen } from "lucide-react"
 import { Link } from "react-router-dom"
 
 import {
@@ -19,6 +19,11 @@ const items = [
     title: "Dashboard",
     url: "dashboard",
     icon: LayoutDashboard,
+  },
+  {
+    title: "Todo",
+    url: "todo",
+    icon: SquarePen,
   },
   {
     title: "Inbox",
@@ -42,7 +47,7 @@ export function SideBar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel ><p className="font-edu font-heading-light">Shared ToDo</p></SidebarGroupLabel>
+          <SidebarGroupLabel ><p className="font-caveat font-heading-light text-lg">Shared ToDo</p></SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (

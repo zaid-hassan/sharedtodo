@@ -562,7 +562,7 @@ const SidebarMenuSub = React.forwardRef(({ className, ...props }, ref) => (
     )}
     {...props} />
 ))
-SidebarMenuSub.displayName = "SidebarMenuSSIDEBARub"
+SidebarMenuSub.displayName = "SidebarMenuSub"
 
 const SidebarMenuSubItem = React.forwardRef(({ ...props }, ref) => <li ref={ref} {...props} />)
 SidebarMenuSubItem.displayName = "SidebarMenuSubItem"

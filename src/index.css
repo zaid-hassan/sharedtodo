@@ -4,6 +4,15 @@
 
 /* ... */
 
+@layer utilities {
+  .animate-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animate-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
 @layer base {
   :root {
 

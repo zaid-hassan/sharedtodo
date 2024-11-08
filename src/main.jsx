@@ -7,15 +7,14 @@ import {
 } from "react-router-dom";
 import './index.css'
 import Layout from './Layout';
-import Dashboard from './components/custom/pages/Dashboard';
-import Inbox from './components/custom/pages/Inbox';
-import Home from './components/custom/pages/Home';
+import { Home, Dashboard, Todo, Inbox } from '@/components/index';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
       <Route index element={<Home />} />
       <Route path='dashboard' element={<Dashboard />} />
+      <Route path='todo' element={<Todo />} />
       <Route path='inbox' element={<Inbox />} />
     </Route>
   )
