@@ -1,4 +1,4 @@
-import { Inbox, LogIn, LogOut, LayoutDashboard, SquarePen } from "lucide-react"
+import { Inbox, LogIn, LogOut, LayoutDashboard, SquarePen, Settings } from "lucide-react"
 import { Link } from "react-router-dom"
 
 import {
@@ -39,6 +39,11 @@ const items = [
     title: "Logout",
     url: "logout",
     icon: LogOut,
+  },
+  {
+    title: "Settings",
+    url: "settings",
+    icon: Settings,
   },
 ]
 
