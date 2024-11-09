@@ -2,7 +2,9 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <section className='flex h-screen p-4'>
+      <div className="">hello</div>
+    </section>
   )
 }
 

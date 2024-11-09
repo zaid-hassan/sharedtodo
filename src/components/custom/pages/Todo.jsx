@@ -1,8 +1,11 @@
 import React from 'react'
+import TodoForm from '../TodoForm'
 
 function Todo() {
   return (
-    <div>Todo</div>
+    <section className='flex p-4 justify-center'>
+      <TodoForm />
+    </section>
   )
 }
 
