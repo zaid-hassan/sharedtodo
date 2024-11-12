@@ -8,7 +8,7 @@ export default function Layout() {
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
             <SidebarProvider>
                 <SideBar />
-                <main className="w-[100%]">
+                <main className="w-full overflow-x-hidden">
                     <SidebarTrigger />
                     <Outlet />
                 </main>
